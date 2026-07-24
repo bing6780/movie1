@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieFlix - Movie Discovery App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo">🎬</div>
+                <h1 class="title">MovieFlix</h1>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="toggle-btn" aria-label="Toggle dark mode">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Search Box -->
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Search movies..."
+                    aria-label="Search movies"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <!-- Genre Filters -->
+            <div class="genre-section">
+                <h3 class="genre-title">Genres</h3>
+                <div id="genreFilters" class="genre-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="movieGrid" class="movie-grid">
+                <!-- Movie cards generated dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MovieFlix. All rights reserved. | Enjoy discovering great movies!</p>
+    </footer>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <img id="modalPoster" src="" alt="Movie poster" class="modal-poster">
+                <div class="modal-info">
+                    <h2 id="modalTitle" class="modal-title"></h2>
+                    <div class="modal-meta">
+                        <span id="modalYear" class="modal-year"></span>
+                        <span id="modalRating" class="modal-rating"></span>
+                    </div>
+                    <div class="modal-details">
+                        <p><strong>Genres:</strong> <span id="modalGenres"></span></p>
+                        <p><strong>Runtime:</strong> <span id="modalRuntime"></span></p>
+                        <p><strong>Director:</strong> <span id="modalDirector"></span></p>
+                        <p><strong>Cast:</strong> <span id="modalActors"></span></p>
+                    </div>
+                    <p id="modalDescription" class="modal-description"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
